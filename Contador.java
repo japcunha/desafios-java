@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// Classe de exceção personalizada
+
 class ParametrosInvalidosException extends Exception {
     public ParametrosInvalidosException() {
         super("O segundo parâmetro deve ser maior que o primeiro");
@@ -8,6 +8,7 @@ class ParametrosInvalidosException extends Exception {
 }
 
 public class Contador {
+
     public static void main(String[] args) {
         Scanner terminal = new Scanner(System.in);
 
