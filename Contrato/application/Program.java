@@ -1,6 +1,9 @@
 package Contrato.application;
 
-import javax.xml.crypto.Data;
+import Contrato.model.entities.Contract;
+import Contrato.model.entities.Installment;
+import Contrato.model.services.ContractService;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -17,14 +20,19 @@ public class Program {
         System.out.print("Numero: ");
         int number = sc.nextInt();
         System.out.print("Data (dd/MM/yyyy): ");
-        LocalDate data = LocalDate.parse(sc.nextLine(), fmt);
+        LocalDate date = LocalDate.parse(sc.nextLine(), fmt);
         System.out.print("Valor do contrato: ");
-        Double valor = sc.nextDouble();
-        System.out.print("Entre com o numero de parcelass: ");
-        int parcelas = sc.nextInt();
-        System.out.println("parcelas: ");
-        System.out.print(parcelas);
+        double totalValue = sc.nextDouble();
 
-        System.out.println("");
+        Contract contract = new Contract(number, date, totalValue);
+
+        System.out.print("Entre com o numero de parcelass: ");
+        int n = sc.nextInt();
+        ContractService contractService = new ContractService(null);
+        contractService.processContract(contract, n);
+        System.out.println("parcelas: ");
+        for (Installment installment : contract.getInstallments()) {
+            System.out.println(installment);
+        }
     }
 }
