@@ -9,6 +9,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="LeetCode" target="24" />
       <module name="LeitorDeArquivo2" target="24" />
     </bytecodeTargetLevel>
   </component>

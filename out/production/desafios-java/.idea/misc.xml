@@ -5,10 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/LeitorDeArquivo2/pom.xml" />
+        <option value="$PROJECT_DIR$/LeetCode/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/LeetCode/pom.xml" />
         <option value="$PROJECT_DIR$/LeitorDeArquivo2/pom.xml" />
       </set>
     </option>
